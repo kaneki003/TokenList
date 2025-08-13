@@ -55,10 +55,11 @@ The TokenList repository maintains an official list of tokens recognized and sup
 Currently, we maintain token lists for the following networks:
 
 - Ethereum (`ethereum-tokens.json`)
-- Binance Smart Chain (`binance-smart-chain-tokens.json`)
-- Polygon PoS (`polygon-pos-tokens.json`)
 - Ethereum Classic (`ethereum-classic-tokens.json`)
-- Milkomeda Cardano (`milkomeda-cardano-tokens.json`)
+- Cardano's Milkomeda (`cardano's-milkomeda-tokens.json`)
+- Polygon PoS (`polygon-pos-tokens.json`)
+- Binance Smart Chain (`binance-smart-chain-tokens.json`)
+- Base(`base-tokens.json`)
 
 Each blockchain-specific list contains verified tokens with the following information:
 
@@ -67,6 +68,8 @@ Each blockchain-specific list contains verified tokens with the following inform
 - Name
 - Contract Address
 - Token Image/Logo
+
+If you would like us to support other blockchains, please contact us in [Discord](https://discord.gg/YzDKeEfWtS).
 
 ## Token Requirements
 
@@ -94,13 +97,11 @@ To submit a new token to our list, please follow these steps:
 
 1. Fork the repository
 2. Create a new branch with the naming convention: `add-token/<blockchain>-<token-symbol>`
-
    ```bash
    git checkout -b add-token/ethereum-XYZ
    ```
 
 3. Add your token information to the respective chain's JSON file (e.g., `ethereum-tokens.json` for Ethereum tokens). The token should be added in alphabetical order by symbol:
-
    ```json
    {
      "id": "example-token",
@@ -111,34 +112,16 @@ To submit a new token to our list, please follow these steps:
    }
    ```
 
-4. Submit a Pull Request with the following information in the title and description:
-
-   Title Format:
-
-   ```
-   Add <TOKEN_NAME> (<TOKEN_SYMBOL>) to <BLOCKCHAIN> list
-   ```
-
-   Description Template:
-
-   ```markdown
-   ## Token Information
-
-   - Name:
-   - Symbol:
-   - Contract Address:
-   - Blockchain:
-   - Market Cap:
-   - Explorer Link:
-   - Official Website:
-   - Additional Context (optional):
-   ```
-
-5. Push your changes and open the Pull Request
-
+4. Push your changes
    ```bash
    git push origin add-token/ethereum-XYZ
    ```
+
+5. Open a Pull Request with a title in the format:
+   ```
+   Add <TOKEN_NAME> (<TOKEN_SYMBOL>) to <BLOCKCHAIN> list
+   ```
+   A PR template will automatically be loaded for you to fill in with your token's details.
 
 6. Share your PR in our Discord
    - Join our [Discord server](https://discord.gg/YzDKeEfWtS)
