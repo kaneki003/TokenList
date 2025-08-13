@@ -12,6 +12,7 @@
 <div align="center">
 
 [![Static Badge](https://img.shields.io/badge/Stability_Nexus-228B22?style=for-the-badge&labelColor=FFC517)](https://stability.nexus/)
+
 </div>
 
 <!-- Organization/Project Social Handles -->
@@ -52,6 +53,7 @@ The TokenList repository maintains an official list of tokens recognized and sup
 ## Supported Blockchains
 
 Currently, we maintain token lists for the following networks:
+
 - Ethereum (`ethereum-tokens.json`)
 - Binance Smart Chain (`binance-smart-chain-tokens.json`)
 - Polygon PoS (`polygon-pos-tokens.json`)
@@ -59,6 +61,7 @@ Currently, we maintain token lists for the following networks:
 - Milkomeda Cardano (`milkomeda-cardano-tokens.json`)
 
 Each blockchain-specific list contains verified tokens with the following information:
+
 - Token ID
 - Symbol
 - Name
@@ -71,6 +74,18 @@ Each blockchain-specific list contains verified tokens with the following inform
 
 ---
 
+## Using the Token Lists
+
+Token lists can be accessed using the following URL format:
+
+```
+https://raw.githubusercontent.com/StabilityNexus/TokenList/refs/head/main/<blockchain>-tokens.json
+```
+
+Replace `<blockchain>` with the chain name (e.g., ethereum, polygon-pos, ethereum-classic, etc.)
+
+---
+
 ## Contributing
 
 ### Adding a New Token
@@ -79,11 +94,13 @@ To submit a new token to our list, please follow these steps:
 
 1. Fork the repository
 2. Create a new branch with the naming convention: `add-token/<blockchain>-<token-symbol>`
+
    ```bash
    git checkout -b add-token/ethereum-XYZ
    ```
 
 3. Add your token information to the respective chain's JSON file (e.g., `ethereum-tokens.json` for Ethereum tokens). The token should be added in alphabetical order by symbol:
+
    ```json
    {
      "id": "example-token",
@@ -97,25 +114,28 @@ To submit a new token to our list, please follow these steps:
 4. Submit a Pull Request with the following information in the title and description:
 
    Title Format:
+
    ```
    Add <TOKEN_NAME> (<TOKEN_SYMBOL>) to <BLOCKCHAIN> list
    ```
 
    Description Template:
+
    ```markdown
    ## Token Information
-   - Name: 
-   - Symbol: 
-   - Contract Address: 
-   - Blockchain: 
-   - Market Cap: 
-   - Explorer Link: 
-   - Official Website: 
-   - Additional Context (optional): 
 
+   - Name:
+   - Symbol:
+   - Contract Address:
+   - Blockchain:
+   - Market Cap:
+   - Explorer Link:
+   - Official Website:
+   - Additional Context (optional):
    ```
 
 5. Push your changes and open the Pull Request
+
    ```bash
    git push origin add-token/ethereum-XYZ
    ```
@@ -124,4 +144,3 @@ To submit a new token to our list, please follow these steps:
    - Join our [Discord server](https://discord.gg/YzDKeEfWtS)
    - Go to the #development channel
    - Share your PR link with a brief description of your token
-
