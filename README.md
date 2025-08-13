@@ -79,7 +79,7 @@ Each blockchain-specific list contains verified tokens with the following inform
 Token lists can be accessed using the following URL format:
 
 ```
-https://raw.githubusercontent.com/StabilityNexus/TokenList/refs/head/main/<blockchain>-tokens.json
+https://raw.githubusercontent.com/StabilityNexus/TokenList/main/<blockchain>-tokens.json
 ```
 
 Replace `<blockchain>` with the chain name (e.g., ethereum, polygon-pos, ethereum-classic, etc.)
